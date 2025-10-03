@@ -1,0 +1,110 @@
+
+html,body{height:100%
+}
+body{ font-family: Georgia; 
+    max-width: 700px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+    background: conic-gradient(from 60deg, #A33FFB,#EB0DFF, #43C7D0, #a639ff );
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+    
+}
+
+
+
+/* optional: make content nicely centered & stacked */
+.wrap {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  line-height: 1.1;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* stack input better + button horizontally and wrap on small screens */
+.controls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  margin: 0 auto 1.5rem;
+  width: 100%;
+}
+
+
+.controls input {
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+
+}
+.controls button {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+    text-shadow: 0 0 4px #ff3db5;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+/* results list */
+#out {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+/* result cards */
+.card {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+.card .meta {
+  opacity: 0.75;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  color: #ffffff;
+}
+/* button stuff */
+.btn {
+  position: relative;
+  isolation: isolate;
+  color: #ffffff;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 16px;
+  filter: blur(16px);
+  background: radial-gradient(40% 60% at 50% 50%, rgba(0, 255, 255, 0.35), transparent);
+  z-index: -1;
+  pointer-events: none;
+  color: #ffffff;
+}
+#go {
+  appearance: none;
+  border: 2px solid #f700ff;
+  background: transparent;
+  color: #e6f7ff;
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  font: 600 1rem/1.1 system-ui, Segoe UI, Roboto, sans-serif;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 120ms ease;
+}
+#go:hover   { background: rgb(255, 70, 246); transform: translateY(-1px); }
+#go:active  { background: rgb(234, 0, 255);  transform: translateY(0);  }
+#go:focus-visible { outline:2px solid #c300ff; outline-offset:2px; }
+
+
+/* tiny screens: stack input over button */
+@media (max-width: 420px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
