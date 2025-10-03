@@ -7,13 +7,14 @@ body{ font-family: Georgia;
     padding: 0 1rem; 
     background: conic-gradient(from 60deg, #A33FFB,#EB0DFF, #43C7D0, #a639ff );
     background-repeat: no-repeat;
-    background-size: 100% 100%
+    background-size: 100% 100%;
+    mix-blend-mode: overlay;
     
 }
 
 
 
-/* optional: make content nicely centered & stacked */
+/* make content nicely centered & stacked */
 .wrap {
   max-width: 720px;
   margin: 2rem auto;
